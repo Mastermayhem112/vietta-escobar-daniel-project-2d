@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://ddwi5ar3o3dnn"]
+
+[ext_resource type="Texture2D" uid="uid://dflpafi3eb7lc" path="res://icon.svg" id="1_hkha8"]
+[ext_resource type="Texture2D" uid="uid://cn46h51itamen" path="res://Assets/2D Resources/characters/DinoSprites - doux.png" id="2_bdi8m"]
+[ext_resource type="FontFile" uid="uid://d002efqe42en3" path="res://Assets/2D Resources/fonts/PixelOperator8.ttf" id="3_bdi8m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_husy1"]
+atlas = ExtResource("2_bdi8m")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wveh7"]
+atlas = ExtResource("2_bdi8m")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8jj6"]
+atlas = ExtResource("2_bdi8m")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrg3h"]
+atlas = ExtResource("2_bdi8m")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_05rwe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_husy1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wveh7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8jj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrg3h")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_husy1"]
+font = ExtResource("3_bdi8m")
+
+[node name="DemoMap" type="Node2D" unique_id=2143436170]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1453699359]
+position = Vector2(574, 445)
+scale = Vector2(9.34375, 1)
+texture = ExtResource("1_hkha8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1672345569]
+position = Vector2(576, 324)
+sprite_frames = SubResource("SpriteFrames_05rwe")
+animation = &"new_animation"
+
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D" unique_id=615982126]
+zoom = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="." unique_id=212914210]
+offset_left = 458.0
+offset_top = 246.0
+offset_right = 724.0
+offset_bottom = 269.0
+text = "Daniel Vietta Escobar"
+label_settings = SubResource("LabelSettings_husy1")
