@@ -11,9 +11,24 @@ config_version=5
 [application]
 
 config/name="ViettaEscobarDaniel_Project2D"
-run/main_scene="uid://ddwi5ar3o3dnn"
+run/main_scene="uid://gut2cw8houag"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[debug]
+
+gdscript/warnings/unsafe_property_access=2
+gdscript/warnings/unsafe_method_access=2
+gdscript/warnings/unsafe_cast=1
+gdscript/warnings/unsafe_call_argument=2
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "orange",
+"res://Scenes/": "purple",
+"res://Scripts/": "green"
+}
 
 [input]
 
@@ -42,6 +57,7 @@ playerJump={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+common/physics_interpolation=true
 
 [rendering]
 
